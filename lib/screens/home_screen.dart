@@ -10,6 +10,8 @@ class HomeScreen extends StatelessWidget {
   final List<HomePageItem> homePageItems = [
     HomePageItem(
         "Shared Preference", "Shared Preference", HomePageItemKey.sharedPref),
+    HomePageItem(
+        "Bottom Tab", "Bottom Navigation", HomePageItemKey.bottomNavigation),
   ];
 
   @override

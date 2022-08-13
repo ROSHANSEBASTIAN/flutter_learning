@@ -1,3 +1,4 @@
 enum HomePageItemKey {
   sharedPref,
+  bottomNavigation,
 }

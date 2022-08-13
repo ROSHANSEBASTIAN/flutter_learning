@@ -14,6 +14,8 @@ class HomeScreenItem extends StatelessWidget {
   void _onHomeItemClicked(BuildContext context) {
     if (homePageItem.id == HomePageItemKey.sharedPref) {
       Navigator.of(context).pushNamed(routeSplashScreen);
+    } else if (homePageItem.id == HomePageItemKey.bottomNavigation) {
+      Navigator.of(context).pushNamed(bottomNavScreen);
     }
   }
 

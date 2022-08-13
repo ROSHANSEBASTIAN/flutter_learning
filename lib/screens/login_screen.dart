@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import '../constants/screen_name.dart';
 import '../utils/common_utils.dart';
@@ -92,7 +93,7 @@ class _LoginScreenState extends State<LoginScreen> {
   }
 
   // callbacks
-  void _submitButtonHandler(BuildContext context) {
+  Future<void> _submitButtonHandler(BuildContext context) async {
     final _email = _emailController.text;
     final _pwd = _pwdController.text;
     printToLog("Email " + _email);
@@ -100,6 +101,9 @@ class _LoginScreenState extends State<LoginScreen> {
 
     if (_formKey.currentState!.validate() && _email == _pwd) {
       // Go To Home Screen after storing email id in shared preference
+
+      print("Called 1");
+      var x = await saveUsernameToShared(_email);
       Navigator.of(context).pushReplacementNamed(routeType1HomeScreen);
     } else {
       // Error case.
@@ -127,5 +131,10 @@ class _LoginScreenState extends State<LoginScreen> {
           ),
         );
     }
+  }
+
+  Future<void> saveUsernameToShared(String value) async {
+    final _sharedPrefs = await SharedPreferences.getInstance();
+    _sharedPrefs.setString("username", value);
   }
 }
