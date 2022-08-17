@@ -16,6 +16,8 @@ class HomeScreenItem extends StatelessWidget {
       Navigator.of(context).pushNamed(routeSplashScreen);
     } else if (homePageItem.id == HomePageItemKey.bottomNavigation) {
       Navigator.of(context).pushNamed(bottomNavScreen);
+    } else if (homePageItem.id == HomePageItemKey.hiveDB) {
+      Navigator.of(context).pushNamed(studentHomeScreen);
     }
   }
 

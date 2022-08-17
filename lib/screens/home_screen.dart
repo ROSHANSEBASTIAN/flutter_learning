@@ -12,6 +12,7 @@ class HomeScreen extends StatelessWidget {
         "Shared Preference", "Shared Preference", HomePageItemKey.sharedPref),
     HomePageItem(
         "Bottom Tab", "Bottom Navigation", HomePageItemKey.bottomNavigation),
+    HomePageItem("Hive DB", "Hive DB", HomePageItemKey.hiveDB),
   ];
 
   @override
