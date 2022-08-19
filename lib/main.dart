@@ -1,7 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:sample_app_1/screens/student_home_screen.dart';
+import 'package:sample_app_1/db/functions/db_functions.dart';
 
+import './screens/student_home_screen.dart';
 import './screens/bottom_nav_screen.dart';
 import './constants/screen_name.dart';
 import './screens/home_screen.dart';
@@ -9,7 +10,9 @@ import './screens/type_1_home_screen.dart';
 import './screens/spalsh_screen.dart';
 import './screens/login_screen.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await initializeHiveDB();
   runApp(MaterialApp(
     home: HomeScreen(),
     routes: {
