@@ -13,6 +13,7 @@ class HomeScreen extends StatelessWidget {
     HomePageItem(
         "Bottom Tab", "Bottom Navigation", HomePageItemKey.bottomNavigation),
     HomePageItem("Hive DB", "Hive DB", HomePageItemKey.hiveDB),
+    HomePageItem("Numbers API", "Numbers API", HomePageItemKey.numbersAPI),
   ];
 
   @override

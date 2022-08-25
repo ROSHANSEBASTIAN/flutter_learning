@@ -1,7 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:sample_app_1/db/functions/db_functions.dart';
+import 'package:sample_app_1/screens/numbers_api_screen.dart';
 
+import './db/functions/db_functions.dart';
 import './screens/student_home_screen.dart';
 import './screens/bottom_nav_screen.dart';
 import './constants/screen_name.dart';
@@ -21,6 +22,7 @@ Future<void> main() async {
       routeType1HomeScreen: (context) => const Type1HomeScreen(),
       bottomNavScreen: (context) => const BottomNavScreen(),
       studentHomeScreen: (context) => const StudentHomeScreen(),
+      numbersAPIScreen: (context) => const NumbersAPIScreen(),
     },
   ));
 }
